@@ -8,7 +8,7 @@ class PirateDetail extends Component {
   }
   
   render() {
-    const pirates = this.props.pirates;
+    //const pirates = this.props.pirates;
     return (
       <div  className="pirate-detail">
         {Object.keys(this.props.pirates).filter(
@@ -27,13 +27,13 @@ class PirateDetail extends Component {
       border: '3px solid #bada55',
       padding: '0.5rem'
     }
-    
+    console.log('hello');
     const pirate = this.props.pirates[key]
     return (
       <div style={divStyle} key={key}>
       <h3>{pirate.name}</h3>
       <img src={process.env.PUBLIC_URL + '/img/' + pirate.image} alt="pirate" />
-      <p>{pirate.desc}</p>
+      <p>{pirate.description}</p>
       </div>
     )
   }
