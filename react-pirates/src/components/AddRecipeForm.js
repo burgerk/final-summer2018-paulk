@@ -30,7 +30,7 @@ class AddRecipeForm extends Component {
    
      
     const recipe = {
-      name: this.title.value,
+      title: this.title.value,
       date: this.date.value,
       description: this.description.value,
       ingredients: arrIngredients,
