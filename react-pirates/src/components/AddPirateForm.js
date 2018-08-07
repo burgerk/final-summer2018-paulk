@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../assets/css/AddPirateForm.css';
+//import '../assets/css/AddPirateForm.css';
 
 class AddPirateForm extends Component {
   render(){

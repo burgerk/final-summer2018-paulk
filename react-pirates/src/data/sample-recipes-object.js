@@ -10,6 +10,17 @@ module.exports = {
           ],
           preparation: ['Place bread in toaster.',  'Toast.', 'Ignore until toast is burnt.  Serves: none']
         },
+        cheesedoodles01 : {
+          name: 'cheesedoodles01',
+          title: 'Cheese Doodles',
+          date: '2018-08-02',
+          description: 'For unwanted house guests,  the perfect snack!',
+          image: 'cheese_doodles.png',
+          ingredients: [
+            'Bag o\' Cheese Doodles'
+          ],
+          preparation: ['Open Bag',  'Pour into bowl', 'Let stand until stale', 'Serve with a passive-aggressive smile']
+        },
         recipe1309 : {
             name: 'recipe1309', 
             title: 'Lasagna',

@@ -10,6 +10,10 @@ import NavBar from './components/NavBar';
 
 import recipesFile from './data/sample-recipes-object';
 
+//import './assets/css/styles.css';
+
+
+
 class App extends Component {
   
   constructor() {
@@ -29,7 +33,7 @@ class App extends Component {
       <div className="App">
       <Header headerTitle="Recipes!" />
       
-      <NavBar />
+      <NavBar recipes={this.state.recipes} />
       
       <Switch>
       
@@ -40,7 +44,7 @@ class App extends Component {
     render={(props) => <RecipeDetail {...props} recipes={this.state.recipes}  />}
     />
     
-    <Route path='/foo' component={RecipeDetail} />
+    {/*<Route path='/foo' component={RecipeDetail} />*/}
     
     </Switch>  
     

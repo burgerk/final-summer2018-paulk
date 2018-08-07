@@ -57,7 +57,7 @@ class RecipeForm extends Component {
     return (
       <div key={key}>
         <p>{key}</p>
-        <input value={recipe.name}
+        <input value={recipe.title}
           onChange={ (e) => this.handleChange(e, key) }
           type="text" name="title" placeholder="Recipe Title"
         />
