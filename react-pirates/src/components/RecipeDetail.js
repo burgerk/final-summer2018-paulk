@@ -27,7 +27,7 @@ class RecipeDetail extends Component {
     //  border: '3px solid #bada55',
     //  padding: '0.5rem'
     //}
-    console.log('hello');
+  
     const recipe = this.props.recipes[key]
     return (
       /*
@@ -37,20 +37,21 @@ class RecipeDetail extends Component {
       <p>{recipe.description}</p>
       </div>
       */
-      <div className="recipe-preview">
+      <div className="recipe-preview" key={key}>
       <h2>Recipe for {recipe.title}</h2>
       <img src={process.env.PUBLIC_URL + '/img/' + recipe.image} alt="recipe" />
       <h2>Ingredients</h2>
       <ul>
-      <li>{recipe.ingredients[0]}</li>
-      <li>{recipe.ingredients[1]}</li>
-      <li>{recipe.ingredients[2]}</li>
+      {recipe.ingredients.map((v,i) => 
+        <li key={i} >{v}</li>
+        )}
+     
       </ul>
       <h2>Instructions</h2>
       <ul>
-        <li>(recipe.preparation[0].step}</li>
-        <li>{recipe.preparation[1].step}</li>
-        <li>{recipe.preparation[2].step}</li>
+      {recipe.preparation.map((v,i) => 
+        <li key={i} >{v}</li>
+        )}
       </ul>
       </div>
     )

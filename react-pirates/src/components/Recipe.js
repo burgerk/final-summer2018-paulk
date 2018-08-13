@@ -10,23 +10,9 @@ class Recipe extends Component {
 
     // console.log(linkUrl)
     return (
-      /*}
-      <div className='recipe'>
-      <ul>
-      <li><Link to={linkUrl}> {details.name}</Link></li>
-      <li>{details.weapon}</li>
-      <li>{details.vessel}</li>
-      <li>
-         <button onClick={() => this.props.removeRecipe(this.props.index)}>
-              X
-          </button>
-      </li>
-      </ul>
-      </div>
-    */
       <div className='recipe-preview'>
        <h2><Link to={linkUrl}>{details.title}</Link></h2>
-       <img src={process.env.PUBLIC_URL + '/img/' + details.image} alt="recipe" />
+       <img src={process.env.PUBLIC_URL + '/img/' + details.image} alt="recipe" width="20%"/>
        <p>{details.description}</p>
        <span onClick={() => this.props.removeRecipe(this.props.index)}>✖︎</span>
        </div>

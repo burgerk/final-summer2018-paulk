@@ -57,26 +57,39 @@ class RecipeForm extends Component {
     return (
       <div key={key}>
         <p>{key}</p>
-        <input value={recipe.name}
+        <input value={recipe.title}
           onChange={ (e) => this.handleChange(e, key) }
-          type="text" name="name" placeholder="Recipe Name"
+          type="text" name="title" placeholder="Recipe Title"
         />
         <input value={recipe.date}
           onChange={ (e) => this.handleChange(e, key) }
-          type="text" name="weapon" placeholder="Recipe Weapon" />
+          type="text" name="date" placeholder="Recipe Date" />
         <input value={recipe.description}
           onChange={ (e) => this.handleChange(e, key) }
-          type="text" name="vessel" placeholder="Recipe Vessel" />
+          type="text" name="description" placeholder="Recipe Description" />
+          <input value={recipe.ingredients.join()}
+          onChange={ (e) => this.handleChange(e, key) }
+          type="text" name="ingredients" placeholder="Recipe Ingredients" />
+          <input value={recipe.preparation.join()}
+          onChange={ (e) => this.handleChange(e, key) }
+          type="text" name="preparation" placeholder="Recipe Preparation" />
       </div>
     )
   }
 
   handleChange(e, key) {
     const recipe = this.props.recipes[key]
-    // console.log(e.target.name, e.target.value)
+
+    //break delimited strings back into arrays
+  
+    let val = e.target.value; 
+    if(e.target.name === 'ingredients' || e.target.name === 'preparation') 
+    {
+      val = e.target.value.split(',');
+    }
     const updatedRecipe = {
       ...recipe, 
-      [e.target.name]: [e.target.value]
+      [e.target.name]: val
     }
       this.props.updateRecipe(key, updatedRecipe)
   }
