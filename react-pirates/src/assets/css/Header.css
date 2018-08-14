@@ -1,4 +1,4 @@
-.header {
+/* .header {
     min-height: 220px;
     padding: 20px;
     color: #333;
@@ -9,12 +9,37 @@
     background-size: 50%;
     position: relative;
 }
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
 
+header {
+    height: 10vh;
+    background: url(../img/img.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media (min-width: 46.25em) {
+      header {
+        height: 20vh; } 
+    }
+
+/*
 h1 {
     font-family: 'Pirata One', cursive;
     font-size: 5rem;
     color: #C90813;
     line-height: 1.1;
+}
+*/
+header h1 {
+    color: white;
+    font-size: 7vw;
+    font-weight: 400;
+    text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2); 
 }
 
 .logo {

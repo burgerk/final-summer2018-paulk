@@ -47,7 +47,7 @@ class App extends Component {
     {/*<Route path='/foo' component={RecipeDetail} />*/}
     
     </Switch>  
-    
+    <div className="site-wrap">
     {
       Object.keys(this.state.recipes)
       .map( key => <Recipe
@@ -57,6 +57,7 @@ class App extends Component {
         removeRecipe = {this.removeRecipe}
         />)
       }
+      </div>
       
       <RecipeForm
       recipes={this.state.recipes}

@@ -10,6 +10,7 @@ class RecipeDetail extends Component {
   render() {
     //const recipes = this.props.recipes;
     return (
+      <div className="site-wrap">
       <div  className="recipe-detail">
         {Object.keys(this.props.recipes).filter(
           recipe => {
@@ -17,7 +18,7 @@ class RecipeDetail extends Component {
           }
         ).map(this.renderRecipe)}
       
-      </div>
+      </div></div>
     )
   }
   
